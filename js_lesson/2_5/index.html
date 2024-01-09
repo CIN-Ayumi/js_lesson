@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>if文</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script>
+  $(function(){
+    //変数answerを取得
+    $("#button").click(function () { 
+      var answer = $("#value").val(); 
+    
+    //条件分岐
+      if ( answer === '1' ){
+        $('#box').css('background-color','#ba0606');
+        console.log('red');        
+      } else if ( answer === '2') {
+        $('#box').css('background-color','#66ed47');
+        console.log('green');
+      } else if (answer === '3' ){
+        $('#box').css('background-color','#1c0bb8');
+        console.log('blue');
+      } else {
+        $('#box').css('background-color','#aaa');
+      }
+    });
+  });
+  </script>
+</head>
+<body>
+  <input type="text" id="value">
+  <input type="button" id="button" value="ボタン">
+  <div id="box">
+  </div><!-- button -->
+</body>
+</html>
